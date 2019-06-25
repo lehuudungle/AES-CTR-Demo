@@ -12,6 +12,7 @@
 		6F64A03F22C33FE10035B654 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F64A03D22C33FE10035B654 /* Main.storyboard */; };
 		6F64A04122C33FE10035B654 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F64A04022C33FE10035B654 /* Assets.xcassets */; };
 		6F64A04422C33FE10035B654 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F64A04222C33FE10035B654 /* LaunchScreen.storyboard */; };
+		F73370F73DAACEF50BC8E160 /* Pods_AES_256_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A67992F49B84CE70AD539BF7 /* Pods_AES_256_Demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		6F64A04022C33FE10035B654 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F64A04322C33FE10035B654 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F64A04522C33FE10035B654 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FEF98CEAF4A1872B7C8428A /* Pods-AES-256-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AES-256-Demo.debug.xcconfig"; path = "Target Support Files/Pods-AES-256-Demo/Pods-AES-256-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		A67992F49B84CE70AD539BF7 /* Pods_AES_256_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AES_256_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0DF2E9F886BDC468181EC11 /* Pods-AES-256-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AES-256-Demo.release.xcconfig"; path = "Target Support Files/Pods-AES-256-Demo/Pods-AES-256-Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F73370F73DAACEF50BC8E160 /* Pods_AES_256_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				6F64A03822C33FE10035B654 /* AES-256-Demo */,
 				6F64A03722C33FE10035B654 /* Products */,
+				E28AC0EE2FA3E3D16E15ACCB /* Pods */,
+				800E90D44A54D9F04E95463C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,24 @@
 			path = "AES-256-Demo";
 			sourceTree = "<group>";
 		};
+		800E90D44A54D9F04E95463C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A67992F49B84CE70AD539BF7 /* Pods_AES_256_Demo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E28AC0EE2FA3E3D16E15ACCB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8FEF98CEAF4A1872B7C8428A /* Pods-AES-256-Demo.debug.xcconfig */,
+				D0DF2E9F886BDC468181EC11 /* Pods-AES-256-Demo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F64A04822C33FE10035B654 /* Build configuration list for PBXNativeTarget "AES-256-Demo" */;
 			buildPhases = (
+				85EBF766CEA6C5BFCB0A82C9 /* [CP] Check Pods Manifest.lock */,
 				6F64A03222C33FE10035B654 /* Sources */,
 				6F64A03322C33FE10035B654 /* Frameworks */,
 				6F64A03422C33FE10035B654 /* Resources */,
+				B477F16D075318D1EA00F01E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		85EBF766CEA6C5BFCB0A82C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AES-256-Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B477F16D075318D1EA00F01E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AES-256-Demo/Pods-AES-256-Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AES-256-Demo/Pods-AES-256-Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AES-256-Demo/Pods-AES-256-Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6F64A03222C33FE10035B654 /* Sources */ = {
@@ -280,6 +349,7 @@
 		};
 		6F64A04922C33FE10035B654 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FEF98CEAF4A1872B7C8428A /* Pods-AES-256-Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +367,7 @@
 		};
 		6F64A04A22C33FE10035B654 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0DF2E9F886BDC468181EC11 /* Pods-AES-256-Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
